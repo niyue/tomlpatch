@@ -1,4 +1,4 @@
-from toml_patch import TomlFileManager, TomlPatcher, JsonFilePatcher
+from tomlpatch import TomlFileManager, TomlPatcher, JsonFilePatcher
 import os
 import tomli
 

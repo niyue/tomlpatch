@@ -1,4 +1,4 @@
-# toml_patch
+# tomlpatch
 Do you want to patch your toml file structurally like modifying a nested python dictionary? This is a tool for you.
 
 # Description
@@ -7,7 +7,7 @@ For example, `Cargo.toml` is used by Rust projects, and this tool can be used to
 
 # Installation
 ```
-pip install toml_patch
+pip install tomlpatch
 ```
 
 # Usage

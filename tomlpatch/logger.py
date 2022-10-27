@@ -7,4 +7,4 @@ def setup_logging():
     )
 setup_logging()
 
-logger = logging.getLogger('toml_patch')
+logger = logging.getLogger('tomlpatch')

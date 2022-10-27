@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "toml-patch"
+name = "tomlpatch"
 version = "0.1.1"
 description = ""
 authors = ["Yue Ni <niyue.com@gmail.com>"]
 readme = "README.md"
-packages = [{include = "toml_patch"}]
+packages = [{include = "tomlpatch"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -17,4 +17,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-tomlpatch = 'toml_patch.main:main'
+tomlpatch = 'tomlpatch.main:main'

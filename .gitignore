@@ -1,4 +1,4 @@
 dist
 tests/__pycache__
-toml_patch/__pycache__
+tomlpatch/__pycache__
 .vscode

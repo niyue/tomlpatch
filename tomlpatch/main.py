@@ -4,10 +4,10 @@ import importlib.metadata
 import argparse
 import sys
 from pathlib import Path
-from toml_patch import TomlFileManager, JsonFilePatcher
-from toml_patch.logger import logger
+from tomlpatch import TomlFileManager, JsonFilePatcher
+from tomlpatch.logger import logger
 
-package_metadada = importlib.metadata.metadata("toml_patch")
+package_metadada = importlib.metadata.metadata("tomlpatch")
 # info from pyproject.toml's `version` and `description`
 TOML_PATCH_VERSION = package_metadada.get("Version")
 TOML_PATCH_SUMMARY = package_metadada.get("Summary")
