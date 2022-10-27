@@ -1,0 +1,9 @@
+{
+  "patch": {
+    "package.version": "0.0.2",
+    "package.liberssl.features": null
+  },
+  "extend": {
+    "package.sources": ["s4", "s5"]
+  }
+}

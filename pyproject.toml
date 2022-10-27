@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "toml-patch"
+version = "0.1.1"
+description = ""
+authors = ["Yue Ni <niyue.com@gmail.com>"]
+readme = "README.md"
+packages = [{include = "toml_patch"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tomli = "^2.0.1"
+dotty-dict = "^1.3.1"
+tomli-w = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+tomlpatch = 'toml_patch.main:main'

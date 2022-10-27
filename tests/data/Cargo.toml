@@ -1,0 +1,6 @@
+[package]
+name = "my_package"
+version = "0.0.1"
+
+liberssl = { version = "0.10.42", default-features = false, features=["vendered"] }
+sources = ["s1", "s2"]
