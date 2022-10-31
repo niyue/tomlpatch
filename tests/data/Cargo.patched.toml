@@ -7,6 +7,9 @@ sources = [
     "s4",
     "s5",
 ]
+targets = [
+    "t3",
+]
 
 [package.liberssl]
 version = "0.10.42"

@@ -26,6 +26,12 @@ class TomlPatcher:
         self.toml = dotted_toml.to_dict()
         return self.toml
 
+    def remove_list(self, key, value) -> dict:
+        dotted_toml = dotty(self.toml)
+        dotted_toml[key] = [v for v in dotted_toml[key] if v not in value]
+        self.toml = dotted_toml.to_dict()
+        return self.toml
+
     @property
     def patched_toml(self) -> dict:
         return self.toml
@@ -79,6 +85,17 @@ class JsonFilePatcher:
                         raise ValueError(
                             "The value of the 'patch' key must be a dictionary"
                         )
+                elif key == "remove":
+                    if isinstance(value, dict):
+                        for remove_key, remove_value in value.items():
+                            if isinstance(remove_value, list):
+                                patcher.remove_list(remove_key, remove_value)
+                            else:
+                                raise ValueError(
+                                    "remove value for key {} must be a list, not {}".format(
+                                        remove_key, type(remove_value)
+                                    )
+                                )
                 else:
                     raise ValueError(
                         f"Unsupported key {key} in json patch file, only 'extend' and 'patch' are supported"

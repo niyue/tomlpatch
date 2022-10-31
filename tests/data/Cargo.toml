@@ -4,3 +4,4 @@ version = "0.0.1"
 
 liberssl = { version = "0.10.42", default-features = false, features=["vendered"] }
 sources = ["s1", "s2"]
+targets = ["t1", "t2", "t3"]

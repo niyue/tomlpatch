@@ -24,6 +24,7 @@ version = "0.0.1"
 
 liberssl = { version = "0.10.42", default-features = false, features=["vendered"] }
 sources = ["s1", "s2"]
+targets = ["t1", "t2", "t3"]
 ```
 
 And you want to patch the `Cargo.toml` file with a JSON file like this:
@@ -35,6 +36,9 @@ And you want to patch the `Cargo.toml` file with a JSON file like this:
   },
   "extend": {
     "package.sources": ["s4", "s5"]
+  },
+  "remove": {
+    "package.targets": ["t2"]
   }
 }
 ```
@@ -54,6 +58,10 @@ sources = [
     "s2",
     "s4",
     "s5",
+]
+targets = [
+    "t1",
+    "t3",
 ]
 
 [package.liberssl]
